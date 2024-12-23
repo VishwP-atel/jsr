@@ -16,14 +16,28 @@ const SideBar = (props: Props) => {
                 return <div draggable={true} onDragStart={(e:React.DragEvent)=>{
                     switch (component.Name) {
                         case "Text":
-                            console.log("in text");
                             e.dataTransfer.setData("text/plain",JSON.stringify(component));
                             break;
                         case "Container":
                             e.dataTransfer.setData("text/plain",JSON.stringify(component));
                             break;
+                        case "Section":
+                                e.dataTransfer.setData("text/plain",JSON.stringify(component));
+                                break;
+                        case "Link":
+                            e.dataTransfer.setData("text/plain",JSON.stringify(component));
+                                break;
+                        case "ThreeCol":
+                            e.dataTransfer.setData("text/plain",JSON.stringify(component));
+                                break;
+                        case "TwoCol":
+                            e.dataTransfer.setData("text/plain",JSON.stringify(component));
+                                break;
+                        case "Video":
+                            e.dataTransfer.setData("text/plain",JSON.stringify(component));
+                                break;
                         default:
-                            e.dataTransfer.setData("text/plain",JSON.stringify("Invalid Componentr"));
+                            e.dataTransfer.setData("text/plain",JSON.stringify("Invalid Component"));
                             break;
                     }
                     e.dataTransfer.setData("data","");
